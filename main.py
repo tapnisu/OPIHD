@@ -21,7 +21,7 @@ def download():
 
 tkinter = Tk()
 tkinter.resizable(False, False)
-tkinter.title("openhd")
+tkinter.title("opinhd")
 canvas = Canvas(tkinter, width=400, height=200)
 canvas.columnconfigure(0, weight=1)
 inputer = Entry(width=50)
