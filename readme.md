@@ -48,4 +48,4 @@ tkinter.mainloop()
 ```
 
 # Download
-[Link](opihd.exe)
+[Link](dist/opihd.exe)

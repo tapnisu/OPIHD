@@ -24,10 +24,16 @@ tkinter.resizable(False, False)
 tkinter.title("opinhd")
 canvas = Canvas(tkinter, width=400, height=200)
 canvas.columnconfigure(0, weight=1)
+
+label = Label(text="opihd", font='Consolas 50')
 inputer = Entry(width=50)
 button = Button(text='Download', command=download)
+
+label.pack()
 inputer.pack()
+
 button.pack()
+button.place(x=300, y=200)
 
 canvas.pack()
 tkinter.mainloop()
