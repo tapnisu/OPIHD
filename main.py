@@ -1,19 +1,22 @@
-import requests, sys, os
+import requests
+import os
 from tkinter import *
 from tkinter import filedialog
 
 def download():
   link = inputer.get()
+  HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
+  }
 
   if (not link.startswith('https://')):
     link = 'https://' + link.replace('http://', '')
 
-  request = requests.get(link)
+  request = requests.get(link, headers = HEADERS)
 
   directory = filedialog.askdirectory()
 
-  file = open(directory +
-              '/index.html', 'w', encoding="utf-8")
+  file = open(directory + '/index.html', 'w', encoding="utf-8")
   file.write(request.text)
   file.close()
 
@@ -32,9 +35,8 @@ button = Button(text='Download', command=download)
 
 label.pack()
 inputer.pack()
-
 button.pack()
 button.place(x=300, y=200)
-
 canvas.pack()
+
 tkinter.mainloop()
