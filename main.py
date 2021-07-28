@@ -16,7 +16,7 @@ def download():
 
   directory = filedialog.askdirectory()
 
-  file = open(directory + '/index.html', 'w', encoding="utf-8")
+  file = open(directory + '/index.html', 'w', encoding='utf-8')
   file.write(request.text)
   file.close()
 
@@ -25,11 +25,11 @@ def download():
 
 tkinter = Tk()
 tkinter.resizable(False, False)
-tkinter.title("opihd")
+tkinter.title('opihd')
 canvas = Canvas(tkinter, width=400, height=200)
 canvas.columnconfigure(0, weight=1)
 
-label = Label(text="opihd", font='Consolas 50')
+label = Label(text='opihd', font='Consolas 50')
 inputer = Entry(width=50)
 button = Button(text='Download', command=download)
 
